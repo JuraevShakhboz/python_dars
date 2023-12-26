@@ -24,14 +24,3 @@
 #         print("=",sum)
 
 #-------------------------------------------------------------------------------
-def addToArrayForm(num, k: int):
-    for i in reversed(range(len(num))):
-      k, num[i] = divmod(num[i] + k, 10)
-
-    while k > 0:
-      num = [k % 10] + num
-      k //= 10
-
-    return num
-print(addToArrayForm([1,2,3], 34))
-    
